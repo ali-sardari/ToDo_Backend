@@ -23,8 +23,3 @@ NOTE: in this repo we have two branch `simple_rest_api` and `rest_api_with_authe
  $ npm install
  $ node server.js 
 ```
-
-### for more information see the slide and videos
-
-* [Youtube Playlist link](https://www.youtube.com/playlist?list=PL-0EQDLPE23N3WkenBrZzTLfnOIAIybKm)
-* [Slides on Google Slide](https://goo.gl/lzwXys)
