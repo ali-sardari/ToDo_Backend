@@ -37,6 +37,11 @@ app.use(function (req, res, next) {
 
 var prefix_api = "/api/v1";
 
+app.get('/', (req, res) => {
+    var data = _getDataFromJsonFile();
+    res.send("Hello!!")
+});
+
 app.get(prefix_api + '/todo/list', (req, res) => {
     var data = _getDataFromJsonFile();
     res.json(data)
@@ -138,9 +143,14 @@ app.delete(prefix_api + '/todo/delete/:id', (req, res) => {
 
 
 //---app.listen---------------------------------------------------------
-var server = app.listen(5000, function () {
+
+
+
+var server = app.listen(process.env.PORT || 3000,function () {
     var host = server.address().address;
     var port = server.address().port;
     host = host === '::' ? 'localhost' : host;
     console.log("running at http://%s:%s", host, port);
+
+    // res.render()
 });
